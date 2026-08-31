@@ -1,0 +1,135 @@
+:root{
+    --cream:#f3e7d7;
+    --blue:#9fb5c1;
+    --dark:#3f2d26;
+    --border:#75675d;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:
+    repeating-linear-gradient(
+        90deg,
+        var(--cream) 0 240px,
+        var(--blue) 240px 480px
+    );
+
+    color:var(--dark);
+    font-family:'Inter', sans-serif;
+}
+
+nav{
+    background:rgba(243,231,215,.98);
+    position:sticky;
+    top:0;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--dark);
+}
+
+.logo{
+    font-family:'Cormorant Garamond', serif;
+    font-size:2rem;
+}
+
+header{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.intro-card{
+    max-width:1200px;
+    background:var(--cream);
+    border:2px solid var(--border);
+    border-radius:25px;
+    padding:60px;
+}
+
+.intro-card h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:5rem;
+    line-height:1.05;
+}
+
+.intro-card p{
+    margin-top:30px;
+    font-size:1.3rem;
+    max-width:800px;
+}
+
+section{
+    padding:100px 10%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:60px;
+    font-family:'Cormorant Garamond', serif;
+    font-size:4rem;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:40px;
+}
+
+.project{
+    background:var(--cream);
+    padding:30px;
+    min-height:280px;
+    border-radius:12px;
+    transition:.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.project:nth-child(odd){
+    transform:rotate(-3deg);
+}
+
+.project:nth-child(even){
+    transform:rotate(3deg);
+}
+
+.project:hover{
+    transform:scale(1.08) rotate(0deg);
+}
+
+.testimonial-slider{
+    display:flex;
+    justify-content:center;
+}
+
+.testimonial{
+    max-width:800px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    font-size:1.2rem;
+}
+
+footer{
+    text-align:center;
+    padding:100px 0;
+}
